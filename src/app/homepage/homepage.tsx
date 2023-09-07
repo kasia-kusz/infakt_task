@@ -1,3 +1,5 @@
+import HomepageHero from "../../features/homepage/homepage-hero";
+
 export default function Homepage() {
-  return <div>Homepage</div>;
+  return <HomepageHero />;
 }
