@@ -1,0 +1,101 @@
+@mixin breakpoint($point, $orientation: "") {
+  @if $point == laptop_small {
+    @if $orientation == landscape {
+      @media (max-width: 1365px) and (orientation: landscape) {
+        @content;
+      }
+    } @else if $orientation == portrait {
+      @media (max-width: 1365px) and (orientation: portrait) {
+        @content;
+      }
+    } @else {
+      @media (max-width: 1365px) {
+        @content;
+      }
+    }
+  } @else if $point == tablet_big {
+    @if $orientation == landscape {
+      @media (max-width: 1080px) and (orientation: landscape) {
+        @content;
+      }
+    } @else if $orientation == portrait {
+      @media (max-width: 1080px) and (orientation: portrait) {
+        @content;
+      }
+    } @else {
+      @media (max-width: 1080px) {
+        @content;
+      }
+    }
+  } @else if $point == tablet {
+    @if $orientation == landscape {
+      @media (max-width: 867px) and (orientation: landscape) {
+        @content;
+      }
+    } @else if $orientation == portrait {
+      @media (max-width: 867px) and (orientation: portrait) {
+        @content;
+      }
+    } @else {
+      @media (max-width: 867px) {
+        @content;
+      }
+    }
+  } @else if $point == tablet_small {
+    @if $orientation == landscape {
+      @media (max-width: 769px) and (orientation: landscape) {
+        @content;
+      }
+    } @else if $orientation == portrait {
+      @media (max-width: 769px) and (orientation: portrait) {
+        @content;
+      }
+    } @else {
+      @media (max-width: 769px) {
+        @content;
+      }
+    }
+  } @else if $point == phone_big {
+    @if $orientation == landscape {
+      @media (max-width: 601px) and (orientation: landscape) {
+        @content;
+      }
+    } @else if $orientation == portrait {
+      @media (max-width: 601px) and (orientation: portrait) {
+        @content;
+      }
+    } @else {
+      @media (max-width: 601px) {
+        @content;
+      }
+    }
+  } @else if $point == phone {
+    @if $orientation == landscape {
+      @media (max-width: 427px) and (orientation: landscape) {
+        @content;
+      }
+    } @else if $orientation == portrait {
+      @media (max-width: 427px) and (orientation: portrait) {
+        @content;
+      }
+    } @else {
+      @media (max-width: 427px) {
+        @content;
+      }
+    }
+  } @else if $point == phone_small {
+    @if $orientation == landscape {
+      @media (max-width: 390px) and (orientation: landscape) {
+        @content;
+      }
+    } @else if $orientation == portrait {
+      @media (max-width: 390px) and (orientation: portrait) {
+        @content;
+      }
+    } @else {
+      @media (max-width: 390px) {
+        @content;
+      }
+    }
+  }
+}

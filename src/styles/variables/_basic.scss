@@ -1,0 +1,15 @@
+:root {
+  // Border radius
+  --br: 8px;
+  --br-m: 16px;
+
+  //GAP
+  --gap: 8px;
+
+  @for $i from 2 through 10 {
+    --gap-#{$i}: calc(var(--gap) * #{$i});
+  }
+
+  //TRANSITION
+  --trans-basic: 300ms;
+}

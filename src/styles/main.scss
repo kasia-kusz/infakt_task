@@ -1,0 +1,7 @@
+// GLOBAL SCOPE GOES HERE!
+// All the rest goes into CSS modules.
+
+@use "./variables/variables";
+@use "abstracts/reset";
+@use "base/globals";
+@use "base/typography";

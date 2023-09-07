@@ -1,0 +1,15 @@
+@use "@abstracts/responsive" as *;
+
+:root {
+  /* Step 1: 20.00px → 24.00px */
+  --fs-1: clamp(1.25rem, calc(1.18rem + 0.36vw), 1.5rem);
+  --fs-2: 16px;
+  --fs-3: 14px;
+
+  --font-primary: "Roboto";
+
+  @include breakpoint(tablet) {
+    --fs-2: 14px;
+    --fs-3: 12px;
+  }
+}
