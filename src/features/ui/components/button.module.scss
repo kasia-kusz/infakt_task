@@ -1,0 +1,15 @@
+.button {
+  background-color: var(--secondary);
+  color: var(--primary);
+  font-size: var(--fs-3);
+  min-width: 119px;
+  padding: var(--gap) var(--gap-2);
+  border-radius: var(--br);
+  font-weight: 500;
+  line-height: 20px;
+
+  &:hover {
+    background-color: var(--secondary-hover);
+    transition: background-color var(--trans-basic);
+  }
+}
