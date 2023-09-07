@@ -1,15 +1,15 @@
 @mixin breakpoint($point, $orientation: "") {
   @if $point == laptop_small {
     @if $orientation == landscape {
-      @media (max-width: 1365px) and (orientation: landscape) {
+      @media (max-width: 1280px) and (orientation: landscape) {
         @content;
       }
     } @else if $orientation == portrait {
-      @media (max-width: 1365px) and (orientation: portrait) {
+      @media (max-width: 1280px) and (orientation: portrait) {
         @content;
       }
     } @else {
-      @media (max-width: 1365px) {
+      @media (max-width: 1280px) {
         @content;
       }
     }

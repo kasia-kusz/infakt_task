@@ -1,0 +1,60 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-3);
+  align-items: flex-start;
+
+  .header {
+    display: flex;
+    max-width: 100%;
+
+    .name {
+      font-size: var(--fs-1);
+      font-weight: 700;
+      line-height: 32px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .avatar {
+      border-radius: var(--br);
+      height: 64px;
+      width: 64px;
+      margin-right: 16px;
+    }
+
+    .title {
+      color: var(--color-font-secondary);
+      font-size: var(--fs-2);
+      line-height: 24px;
+    }
+  }
+
+  .ellipsisBox {
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .label {
+    color: var(--color-font-secondary);
+    font-size: var(--fs-3);
+    line-height: 20px;
+  }
+
+  .text {
+    font-size: var(--fs-2);
+    line-height: 24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    .textSmaller {
+      font-size: var(--fs-3);
+      line-height: 16px;
+    }
+  }
+
+  .email {
+    text-decoration: underline;
+  }
+}

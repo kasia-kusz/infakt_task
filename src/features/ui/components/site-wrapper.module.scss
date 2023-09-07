@@ -7,14 +7,4 @@
   margin-right: auto;
   padding-left: var(--gap-3);
   padding-right: var(--gap-3);
-
-  @include breakpoint(laptop_small) {
-    max-width: 1000px;
-    padding-left: var(--gap-3);
-    padding-right: var(--gap-3);
-  }
-
-  @include breakpoint(tablet_big) {
-    max-width: 100%;
-  }
 }

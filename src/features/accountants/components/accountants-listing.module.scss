@@ -1,0 +1,33 @@
+@use "../../../styles/abstracts/responsive" as *;
+
+.container {
+  padding-bottom: var(--gap-6);
+
+  .listing {
+    --columns: 4;
+
+    display: grid;
+    grid-template-columns: repeat(var(--columns), minmax(0, 1fr));
+    gap: var(--gap-3);
+    margin-bottom: var(--gap-6);
+
+    @include breakpoint(laptop_small) {
+      gap: var(--gap-2);
+    }
+
+    @include breakpoint(tablet_big) {
+      --columns: 2;
+      gap: var(--gap-3);
+    }
+
+    @include breakpoint(phone_big) {
+      --columns: 1;
+    }
+  }
+
+  .error {
+    padding-top: var(--gap-2);
+    font-size: var(--fs-3);
+    color: red;
+  }
+}

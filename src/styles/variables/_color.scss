@@ -1,7 +1,7 @@
 :root {
   --primary: #1e88e5;
   --secondary: #e3f2fd;
-  --secondary-dark: #ccd9e3;
+  --secondary-hover: #ebf5fd;
 
   --color-black: #000;
   --color-white: #ffffff;
@@ -9,7 +9,7 @@
 
   --color-gray: #54585c;
 
-  --color-font: #000;
+  --color-font: var(--color-black);
   --color-font-secondary: var(--color-gray);
   --color-border: #e4e6e8;
 }
