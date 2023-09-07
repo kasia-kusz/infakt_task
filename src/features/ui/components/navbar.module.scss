@@ -1,0 +1,19 @@
+@use "../../../styles/abstracts/responsive" as *;
+
+.container {
+  .logo {
+    padding: 48px 0;
+
+    img {
+      width: 146px;
+    }
+  }
+
+  @include breakpoint(tablet_big) {
+    .logo {
+      img {
+        width: 110px;
+      }
+    }
+  }
+}

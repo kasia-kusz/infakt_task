@@ -1,3 +1,10 @@
+import Navbar from "../../features/ui/components/navbar";
+import SiteWrapper from "../../features/ui/components/site-wrapper";
+
 export default function Accountants() {
-  return <div>Accountants</div>;
+  return (
+    <SiteWrapper>
+      <Navbar />
+    </SiteWrapper>
+  );
 }
