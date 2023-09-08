@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/infakt_task/static/css/main.92f79180.css",
-    "main.js": "/infakt_task/static/js/main.611568d5.js",
+    "main.js": "/infakt_task/static/js/main.b1495600.js",
     "index.html": "/infakt_task/index.html",
     "main.92f79180.css.map": "/infakt_task/static/css/main.92f79180.css.map",
-    "main.611568d5.js.map": "/infakt_task/static/js/main.611568d5.js.map"
+    "main.b1495600.js.map": "/infakt_task/static/js/main.b1495600.js.map"
   },
   "entrypoints": [
     "static/css/main.92f79180.css",
-    "static/js/main.611568d5.js"
+    "static/js/main.b1495600.js"
   ]
 }
