@@ -5,9 +5,11 @@ export default function ErrorPage() {
   return (
     <main className={styles.container}>
       <div className={styles.text}>404</div>
-      <Button el="link" url="/">
-        Strona główna
-      </Button>
+      <div>
+        <Button el="link" url="/">
+          Strona główna
+        </Button>
+      </div>
     </main>
   );
 }

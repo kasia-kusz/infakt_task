@@ -1,8 +1,27 @@
+@use "../../styles/abstracts/responsive" as *;
+
 .container {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: var(--gap-3);
 
   .text {
     color: var(--primary);
     font-size: 20rem;
+  }
+
+  @include breakpoint(tablet) {
+    .text {
+      font-size: 14rem;
+    }
+  }
+
+  @include breakpoint(phone) {
+    .text {
+      font-size: 10rem;
+    }
   }
 }
