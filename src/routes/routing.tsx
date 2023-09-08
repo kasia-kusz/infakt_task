@@ -5,22 +5,17 @@ import Homepage from "../app/homepage/homepage";
 import ErrorPage from "../app/error/error-page";
 
 export function Routing() {
-  const router = createBrowserRouter(
-    [
-      {
-        path: "/",
-        element: <Homepage />,
-        errorElement: <ErrorPage />,
-      },
-      {
-        path: "/ksiegowi",
-        element: <Accountants />,
-      },
-    ],
+  const router = createBrowserRouter([
     {
-      basename: "/infakt_task",
-    }
-  );
+      path: "/",
+      element: <Homepage />,
+      errorElement: <ErrorPage />,
+    },
+    {
+      path: "/ksiegowi",
+      element: <Accountants />,
+    },
+  ]);
 
   return <RouterProvider router={router} />;
 }
