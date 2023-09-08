@@ -9,27 +9,27 @@ export default function AccountantsListing() {
   const [accountants, setAccountants] = useState<AccountantType[]>([]);
   const [isError, setIsError] = useState(false);
 
-  useEffect(() => {
+  function loadAccountants() {
     try {
       setIsError(false);
-      getAccountants(page).then((data) => {
-        if (page === 1) {
+      if (page === 1) {
+        getAccountants(page).then((data) => {
           setAccountants(data.results);
-        } else {
+        });
+      } else {
+        getAccountants(page + 1).then((data) => {
           setAccountants((prev) => prev.concat(data.results));
-        }
-      });
+        });
+      }
+      setPage((prev) => prev + 1);
     } catch (error) {
       setIsError(true);
-      if (page > 1) {
-        setPage((prev) => prev - 1);
-      }
     }
-  }, [page]);
-
-  function handleLoadMore() {
-    setPage((prev) => prev + 1);
   }
+
+  useEffect(() => {
+    loadAccountants();
+  }, []);
 
   return (
     <section className={styles.container}>
@@ -39,12 +39,16 @@ export default function AccountantsListing() {
         ))}
       </div>
       {isError ? (
-        <>
-          <Button onClick={handleLoadMore}>Spróbuj ponownie</Button>
+        <div data-testid="error-component">
+          <Button onClick={loadAccountants}>Spróbuj ponownie</Button>
           <p className={styles.error}>Coś poszło nie tak!</p>
-        </>
+        </div>
       ) : (
-        <Button onClick={handleLoadMore}>Wczytaj więcej</Button>
+        <div data-testid="data-component">
+          <Button onClick={loadAccountants} data-testid="more">
+            Wczytaj więcej
+          </Button>
+        </div>
       )}
     </section>
   );
